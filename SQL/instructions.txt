@@ -1,0 +1,5 @@
+Create a Database in Microsoft MySQL named studymanagement
+
+Import the .sql files
+
+And then start the server with npm start and run backend python server
