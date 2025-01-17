@@ -41,6 +41,7 @@ const Login = () => {
                 <input type="password" value={password} onChange={(e)=>{setPassword(e.target.value)}} required/>
                 </div>
                 <Link to="/register" className={styles.register}>Register here</Link>
+                <Link to="/contactus" className={styles.register}>Contact Us</Link>
                 <button type="submit" className={styles.button} onClick={Submit}>Login</button>
                 </form>
             </div>

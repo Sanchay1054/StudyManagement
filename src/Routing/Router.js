@@ -6,6 +6,7 @@ import Subject from '../Screen/Subject';
 import Topic from '../Screen/Topic';
 import EditSubject from '../Screen/EditSubject';
 import AddStudy from '../Screen/AddStudy';
+import ContactUs from '../Screen/Contact';
 
 const Router = () => {
     return(
@@ -18,6 +19,7 @@ const Router = () => {
                 <Route path="/topic" element={<Topic/>}/>
                 <Route path="/editsubject" element={<EditSubject/>}/>
                 <Route path="/addstudy" element={<AddStudy/>}/>
+                <Route path="/contactus" element={<ContactUs/>}/>
             </Routes>
         </BrowserRouter>
     )

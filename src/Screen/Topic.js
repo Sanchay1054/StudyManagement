@@ -2,6 +2,7 @@ import react, { useEffect, useRef, useState } from 'react';
 import { useSession } from '../Session/Session';
 import { useLocation, useNavigate } from 'react-router-dom';
 import styles from '../Styles/Topic.module.css';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 const Topic = () => {
@@ -191,7 +192,10 @@ const Topic = () => {
         <div className={styles.container}>
             <div className={styles.header}>
                 Topic
-                <div className={styles.logout} onClick={()=>{logout()}}>logout</div>
+                <div className={styles.row}>
+                <div className={styles.logout} onClick={()=>{logout()}}>logout </div>
+                <Link to="/contactus" className={styles.link}> Contact Us</Link>
+                </div>
             </div>
             <div className={styles.content}>
             <div className={styles.topic}>

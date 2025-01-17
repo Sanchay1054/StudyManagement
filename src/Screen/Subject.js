@@ -2,6 +2,7 @@ import react, { useEffect, useRef, useState } from 'react';
 import { useSession } from '../Session/Session';
 import { useNavigate } from 'react-router-dom';
 import styles from '../Styles/Subject.module.css';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 const Subject = () => {
@@ -134,6 +135,7 @@ const Subject = () => {
                 <div className={styles.function}>
                 Studying status </div> <select ref={studyref} className={styles.study_status} onChange={(e)=>{updateSession({...sessionData, current_study:e.target.value}); setLoading(true)}}><option>I</option><option>II</option><option>III</option><option>IV</option><option>V</option><option>VI</option><option>VII</option><option>VIII</option><option>IX</option><option>X</option><option>XI</option><option>XII</option><option>I year</option><option>II year</option><option>III year</option><option>IV year</option><option>General</option></select>
                     <button className={styles.logout} onClick={logout}>log out</button>
+                    <Link to="/contactus" className={styles.link}>Contact Us</Link>
                 </div>
             </div>
                 {loading ? <p>Loading...</p> : <div className={styles.bodycontainer}>{addSubject()}{renderSubjects()}</div>}
